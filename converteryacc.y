@@ -1,6 +1,5 @@
 %{
 #include<stdio.h> 
-#include<math.h>
 extern FILE *yyin;
 %} 
 %union{
