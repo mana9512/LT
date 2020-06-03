@@ -109,7 +109,7 @@ E: NUMBER gallon to gallon	{$$=1*($1); printf("Converted volume of %d gallon = %
 
 						
 %%
-void yyerror(char *s){}
+void yyerror(char *s){fprintf(stderr,"%s\n",s);}
 int main(int argc, char *argv[]) 
 {
 while(1)
