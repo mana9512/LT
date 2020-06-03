@@ -10,11 +10,7 @@ DIGIT    [0-9]
 		yylval.integer=atoi(yytext);
 		return NUMBER;
 		}
-/*{DIGIT}+"."{DIGIT}* {
-		yylval.real=(float)atof(yytext); 
-		return FLOAT;
-		}
-*/
+
 convert   {return convert;}
 to	      {return to;}
 volume	  {return volume;}
