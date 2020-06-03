@@ -7,13 +7,13 @@ extern FILE *yyin;
 int integer;
 float real;
 }
-%token <integer> NUMBER <real>	FLOAT
+%token <integer> NUMBER 
 %token convert to volume gallon cup tablespoon teaspoon cubic meter litre millilitre foot inch
 %type <real> S E 
 
 %%
 
-S: convert E{$$=$2;};
+S: convert E;
 
 E: NUMBER gallon to gallon	{$$=1*($1); printf("Converted volume of %d gallon = %f gallon\n",$1,$$);}
   |NUMBER gallon to cup	{$$=157725*($1); printf("Converted volume of %d gallon = %f cup\n",$1,$$);}
