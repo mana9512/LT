@@ -12,7 +12,7 @@ float real;
 %type <real> S E 
 
 %%
-//ResultExpression:S{printf("Your Answer is %f",$$);};
+
 S: convert E{$$=$2;};
 
 E: NUMBER gallon to gallon	{$$=1*($1); printf("Converted volume of %d gallon = %f gallon\n",$1,$$);}
