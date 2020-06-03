@@ -112,11 +112,10 @@ E: NUMBER gallon to gallon	{$$=1*($1); printf("Converted volume of %d gallon = %
 void yyerror(char *s){}
 int main(int argc, char *argv[]) 
 {
-yyin=fopen(argv[1],"r");
-int i;
-for(i=1;i<=6;i++){
+while(1)
+{
 yyparse();
 }
-fclose(yyin);
+
 return 0;
 }
